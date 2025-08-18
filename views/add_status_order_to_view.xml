@@ -12,8 +12,20 @@
         </field>
     </record>
 
+    <record id="add_status_order_list_crm_inherit_sale_order" model="ir.ui.view">
+        <field name="name">sale.order.view.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="status_order" class="o_field_status_order"
+                    options="{'no_create': True, 'no_open': True}" />
+            </xpath>
+        </field>
+    </record>
+
     <record id="add_status_order_list_inherit_sale_order" model="ir.ui.view">
-        <field name="name">sale.order.view.form.inherit</field>
+        <field name="name">sale.order.quoation.view.tree.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_quotation_tree" />
         <field name="arch" type="xml">
