@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="quote_status_view_order_tree_inherit_sale" model="ir.ui.view">
+        <field name="name">sale.order.view.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='expected_date']" position="replace">
+                <field name="finished_date" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="quote_status_view_order_form_inherit_sale" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='confirmation_date']" position="after">
+                <field name="finished_date" attrs="{'invisible': [('finished_date','=',False)]}" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

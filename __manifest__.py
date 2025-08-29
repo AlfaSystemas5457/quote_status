@@ -13,6 +13,7 @@
     ],
     'data': [
         'views/add_status_order_to_view.xml',
+        'views/add_finished_date_in_sale_view_order_tree.xml',
     ],
     'auto_install': False,
     'application': False,

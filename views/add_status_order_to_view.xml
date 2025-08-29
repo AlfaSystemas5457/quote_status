@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <record id="add_status_order_inherit_sale_order" model="ir.ui.view">
-        <field name="name">sale.order.view.form.inherit</field>
+        <field name="name">sale.order.view.order.form.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
@@ -13,7 +13,7 @@
     </record>
 
     <record id="add_status_order_list_crm_inherit_sale_order" model="ir.ui.view">
-        <field name="name">sale.order.view.tree.inherit</field>
+        <field name="name">sale.order.view.crm.tree.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_tree" />
         <field name="arch" type="xml">
@@ -25,7 +25,7 @@
     </record>
 
     <record id="add_status_order_list_inherit_sale_order" model="ir.ui.view">
-        <field name="name">sale.order.quoation.view.tree.inherit</field>
+        <field name="name">sale.order.quoation.view.order.tree.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_quotation_tree" />
         <field name="arch" type="xml">
