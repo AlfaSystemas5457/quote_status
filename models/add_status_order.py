@@ -25,7 +25,3 @@ class AddStatusOrder(models.Model):
         else:
             self.finished_date = False
             
-            
-            
-            
-            # Falta agregar lo de excel 
