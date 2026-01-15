@@ -12,6 +12,8 @@ class AddStatusOrder(models.Model):
             ('processing', 'En proceso'),
             ('finished', 'Finalizado'),
             ('invoiced', 'Facturado'),
+            ('cancel', 'Cancelado'),
+            ('lost', 'Perdido'),
         ], default='to_be_defined', string='Estado del presupuesto', track_visibility='onchange', track_sequence=2,
         help="Estado del pedido de venta para el seguimiento del proceso.", required=True
     )
@@ -22,6 +24,4 @@ class AddStatusOrder(models.Model):
     def _onchange_status_order(self):
         if self.status_order == 'finished':
             self.finished_date = fields.Datetime.now()
-        else:
-            self.finished_date = False
             
